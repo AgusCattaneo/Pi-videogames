@@ -123,6 +123,7 @@ export default function Home (){
 
                 <SearchBar
                 setCurrentPage={setCurrentPage}/>
+            <div>
             {currentGames?.map((v) => {
                 return (
                     <div key={v.id} >
@@ -133,6 +134,7 @@ export default function Home (){
                 );
                 })
             }
+            </div>
             </div>
         </div>
         </div>
