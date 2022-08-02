@@ -1,0 +1,59 @@
+html body {
+    background: url(https://wallpaperaccess.com/full/4848691.jpg) no-repeat center center fixed;
+    background-size: cover;
+    width: 100%;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    /* align-items: center; */
+  }
+
+  .title{
+    font-size: 80px;
+    color: var(--color-neon-green)
+  }
+
+  .btnCreate{
+    background-color: transparent;
+    color: var(--color-neon-green);
+    border-color: transparent;
+    font-size: 2em;
+    transition: all .25s;  
+    cursor: pointer;  
+    border-radius: 20px;
+  }
+
+  .btnCreate:hover{
+    background-color: var(--color-kleptomaniac-grass);
+    color: var(--color-dark-green);
+  }
+
+  .btnReload{
+    background-color: transparent;
+    color: var(--color-neon-green);
+    border-color: transparent;
+    font-size: 1.5em;
+    transition: all .25s;
+    cursor: pointer;
+    border-radius: 20px;
+  }
+
+  .btnReload:hover{
+    background-color: var(--color-kleptomaniac-grass);
+    color: var(--color-dark-green);
+  }
+
+  .link:link{
+    color: var(--color-neon-green)
+  }
+
+  .link:visited{
+    color: var(--color-neon-green)
+  }
+
+  .link:hover{
+    color: var(--color-kleptomaniac-grass)
+  }

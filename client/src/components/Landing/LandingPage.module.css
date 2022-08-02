@@ -1,0 +1,43 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  } 
+
+.bg{
+    background-image: url(https://wallpaper-mania.com/wp-content/uploads/2018/09/High_resolution_wallpaper_background_ID_77700865207.jpg) ;
+    background-size: cover ;
+    height: 100vh;
+    width: 100vw;
+    background-position: center center;
+    background-attachment: fixed;
+}
+
+.title{
+    color: var(--color-neon-green);
+    font-family: 'Press Start 2P', cursive;
+    margin-top: 100px;
+    margin-left: 700px;
+    font-size: 2.5em;
+}
+
+.btn{
+    background-color: black;
+    color:  var(--color-neon-green);
+    border-color: var(--color-neon-green);
+    font-family: 'Press Start 2P', cursive;
+    margin-left: 850px;
+    margin-top: 400px;
+    font-size: 1.25em;
+    border-radius: 40em;
+    cursor: pointer;
+    transition: background-color 0.75s;
+    height: 35px;
+    text-align: center;
+    justify-content: center;
+}
+
+.btn:hover{
+    color: var(--color-kleptomaniac-grass);
+    background-color: transparent;
+}
