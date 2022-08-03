@@ -3,6 +3,7 @@ import { useState , useEffect } from "react";
 import { useDispatch , useSelector } from "react-redux";
 import { Link , useNavigate } from "react-router-dom";
 import { postVideogame , getGenres  } from "../../actions";
+import styles from './VideoGameCreate.module.css'
 
 function validate (input){
     let errors = {}
@@ -168,7 +169,7 @@ export default function VideogameCreate(){
     }
 
     return(
-        <div>
+        <div className={styles.container}>
             <Link to= '/home'><button>Go back</button></Link>
             <h1>Enter New Videogame</h1>
             <form onSubmit={(e)=>handleSubmit(e)}>

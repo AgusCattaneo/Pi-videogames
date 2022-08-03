@@ -21,7 +21,7 @@ export default function Detail(){
     return (
         <div className={styles.container} key={myVideogame.id}>
                         <Link to='/home'>
-                <button>Go back</button>
+                <button className={styles.button}>Go back</button>
             </Link>
             {
                 myVideogame?
@@ -48,7 +48,7 @@ export default function Detail(){
                             <p className={styles.p}>{myVideogame.platforms + ' '}</p>
                         </div>
                     </div>
-                </div> : <p className={styles.p}>Loading...</p>
+                </div> : <p className={styles.loading}>Loading...</p>
             } 
         </div>
     )
