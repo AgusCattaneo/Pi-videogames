@@ -1,8 +1,31 @@
-.container{
+
+  .container {
+    display: flex;
+    flex-direction: row;
     justify-content: center;
-    align-items: center;
-}
+  }
 
 .home{
+    background-color: transparent;
+    color:  var(--color-neon-green);
+    border-color: var(--color-neon-green);
+    margin-left: 50px;
+    font-size: 1.5em;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all 0.75s;
+    height: 35px;
+    text-align: center;
+    justify-content: center;
+}
 
+.home:hover{
+    color: var(--color-dark-green);
+    background-color: black;
+}
+
+.h1{
+    color: var(--color-dark-green);
+    font-size: 3em;
+    margin-left: 600px;
 }

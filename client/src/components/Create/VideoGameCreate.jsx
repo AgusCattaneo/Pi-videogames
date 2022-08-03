@@ -170,8 +170,9 @@ export default function VideogameCreate(){
 
     return(
         <div className={styles.container}>
-            <Link to= '/home'><button>Go back</button></Link>
-            <h1>Enter New Videogame</h1>
+            <div>
+            <Link to= '/home'><button className={styles.home}>Go back</button></Link>
+            <h1 className={styles.h1}>Enter New Videogame</h1>
             <form onSubmit={(e)=>handleSubmit(e)}>
                 <div>
                     <label>Name:</label>
@@ -275,7 +276,7 @@ export default function VideogameCreate(){
 
                 <button type="submit">Submit</button>
             </form>
-
+            </div>
         </div>
     )
 }
