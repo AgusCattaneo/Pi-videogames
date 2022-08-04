@@ -1,15 +1,12 @@
-
-  .container {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-  }
+.container{
+  display: flex;
+  flex-direction: row;
+}
 
 .home{
     background-color: transparent;
     color:  var(--color-neon-green);
     border-color: var(--color-neon-green);
-    margin-left: 50px;
     font-size: 1.5em;
     border-radius: 15px;
     cursor: pointer;
@@ -17,6 +14,7 @@
     height: 35px;
     text-align: center;
     justify-content: center;
+    margin-left: 50px;
 }
 
 .home:hover{
@@ -27,5 +25,121 @@
 .h1{
     color: var(--color-dark-green);
     font-size: 3em;
-    margin-left: 600px;
+    margin-left: 550px;
+    font-family: 'Press Start 2P', cursive;
+}
+
+.div{
+  display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+.label{
+  color: var(--color-neon-green);
+  font-size: 1.2em;
+}
+
+.input {
+  width: 150px;
+  height: 30px;
+  border: none;
+  border-radius: 5px;
+  padding: 0 10px;
+  font-size: 0.95rem;
+  font-weight: 300;
+  background: #a2c394;
+  color: #333;
+  outline: none;
+  box-shadow: 0px 0px 5px 0px rgb(26, 255, 0);
+  transition: box-shadow 0.3s;
+}
+
+.genres{
+  color: var(--color-neon-green);
+  font-size: 1.5em;
+  margin-left: 350px;
+}
+
+.grid{
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 30px;
+  color: var(--color-neon-green);
+  background-color: rgba(0, 0, 0, .5);
+  border-radius: 10px;
+}
+
+.input[type="checkbox"] {
+  height: 1rem;
+  width: 1rem;
+  cursor: pointer;
+  border-radius: 50px;
+  background-color: white;
+  margin-right: 10px;
+  margin-top: 10px;
+  appearance: none;
+}
+
+.input[type="checkbox"]:checked{
+  background-color: var(--color-neon-green);
+ }
+ 
+.select{
+  background-color: #90c27b;
+  color: black
+}
+
+.platforms{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.divPlat{
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.plat{
+  color: var(--color-neon-green);
+  font-size: 1em
+}
+
+.btnDelete{
+  margin-left: 10px;
+  background-color: transparent;
+  color: var(--color-neon-green);
+  border-color: var(--color-neon-green);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.75s;
+}
+
+.btnDelete:hover{
+  background-color: black;
+  color: var(--color-dark-green);
+}
+
+.divSubmit{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.submit{
+  border-radius: 15px;
+  border-color: var(--color-neon-green);
+  background-color: transparent;
+  color: var(--color-neon-green);
+  transition: all 0.5s;
+  font-size: 2em;
+}
+
+.submit:hover{
+  background-color: black;
+  color: var(--color-dark-green);
 }

@@ -169,18 +169,20 @@ export default function VideogameCreate(){
     }
 
     return(
-        <div className={styles.container}>
+        <div>
             <div>
             <Link to= '/home'><button className={styles.home}>Go back</button></Link>
             <h1 className={styles.h1}>Enter New Videogame</h1>
             <form onSubmit={(e)=>handleSubmit(e)}>
-                <div>
-                    <label>Name:</label>
+                <div className={styles.div}>
+                    <label className={styles.label}>Name:</label>
                     <input
                     type= "text"
+                    className={styles.input}
                     required
                     value= {input.name}
                     name= "name"
+                    autoComplete="off"
                     onChange={(e)=> handleChange(e)}
                     />
                     {errors.name && (
@@ -189,13 +191,15 @@ export default function VideogameCreate(){
                 </div>
 
 
-                <div>
-                    <label>Description:</label>
+                <div className={styles.div}>
+                    <label className={styles.label}>Description:</label>
                     <input
                     type= "text"
+                    className={styles.input}
                     required
                     value= {input.description}
                     name= "description"
+                    autoComplete="off"
                     onChange={(e)=> handleChange(e)}
                     />
                     {errors.description && (
@@ -204,13 +208,15 @@ export default function VideogameCreate(){
                 </div>
 
 
-                <div>
-                    <label>Release Date:</label>
+                <div className={styles.div}>
+                    <label className={styles.label}>Release Date:</label>
                     <input
                     type= "date"
                     required
+                    className={styles.input}
                     value= {input.released}
                     name= "released"
+                    autoComplete="off"
                     onChange={(e)=> handleChange(e)}
                     />
                     {errors.released && (
@@ -219,13 +225,15 @@ export default function VideogameCreate(){
                 </div>
 
 
-                <div>
-                    <label>Rating:</label>
+                <div className={styles.div}>
+                    <label className={styles.label}>Rating:</label>
                     <input
                     type= "number"
+                    className={styles.input}
                     required
                     value= {input.rating}
                     name= "rating"
+                    autoComplete="off"
                     onChange={(e)=> handleChange(e)}
                     />
                     {errors.rating && (
@@ -233,48 +241,60 @@ export default function VideogameCreate(){
                     )}
                 </div>
 
-
                 <div>
-                    <label>Genres:</label>         
-                        {genres.map((g)=> (
-                            <label><input
-                            type="checkbox"
-                            name={g.name}
-                            value={g.name}
-                            onChange={(e)=> handleCheck(e)}
-                            />{g.name}</label>
-                        ))}
+                    <label className={styles.genres}>Genres:</label>
+                    <div className={styles.div}>
+                        <div className={styles.grid}>
+                            {genres.map((g)=> (
+                                <div>
+                                    <input
+                                        id={g.name}
+                                        type="checkbox"
+                                        className={styles.input}
+                                        name={g.name}
+                                        value={g.name}
+                                        onChange={(e)=> handleCheck(e)}
+                                    />
+                                    <label for={g.name}>{g.name}</label>
+                                </div>
+                            ))}
+                        </div>
+                    </div> 
+                </div>    
 
-                </div>
-
-
-                <div>
-                    <label>Image:</label>
+                <div className={styles.div}>
+                    <label className={styles.label}>Image:</label>
                     <input
                     type= "text"
+                    className={styles.input}
                     value={input.image}
                     name= "image"
+                    autoComplete="off"
                     onChange={(e)=> handleChange(e)}
                     />
                 </div>
 
-                <div>
-                    <label>Platforms:</label>
-                    <select onChange={(e)=>handleSelect(e)}>
+                <div className={styles.div}>
+                    <label className={styles.label}>Platforms:</label>
+                    <select className={styles.select} onChange={(e)=>handleSelect(e)}>
                         <option value="" hidden >Platforms</option>
                         {plats.map((p)=> (
                             <option value={p}>{p}</option>
                         ))}
                     </select>
+                </div>
+                <div className={styles.platforms}>
                     {input.platforms.map(p =>
-                        <div>
-                            <p>{p}</p>
-                            <button onClick={()=> handleDelete(p)}>x</button> 
+                        <div className={styles.divPlat}>
+                            <div className={styles.plat}>{p}</div>
+                            <button className={styles.btnDelete} onClick={()=> handleDelete(p)}>x</button> 
                         </div>
                     )}
+                    </div>
+                
+                <div  className={styles.divSubmit}>
+                    <button className={styles.submit} type="submit">Submit</button>
                 </div>
-
-                <button type="submit">Submit</button>
             </form>
             </div>
         </div>
