@@ -65,29 +65,38 @@ export default function Home (){
 
 
     return (
-        <div className={styles.container}>
-        <div className={styles.bg}>    
-            <h1 className={styles.title}>Videogames</h1>       
-            <Link to = '/videogame'>
-                <button className={styles.btnCreate}>Create Videogame</button>
-            </Link>
-            <div>
-            <select onChange={(e)=>{handleRating(e)}}>
+        <div>
+        <div>
+            <div className={styles.top}>       
+                <Link to = '/videogame'>
+                    <button className={styles.btnCreate}>Create Videogame</button>
+                </Link>
+                <SearchBar
+                setCurrentPage={setCurrentPage}
+                />
+            </div>
+            <div className={styles.container}>
+                <button className={styles.btnReload} onClick={e=>{handleClick(e)}}>
+                    Reload all videogames
+                </button>
+            </div>  
+            <div className={styles.container}>
+            <select className={styles.filters} onChange={(e)=>{handleRating(e)}}>
                 <option value = 'ratingDefault'>Rating</option>
                 <option value = 'ratingAsc'>Ascending</option>
                 <option value ='ratingDesc'>Descending</option>
                 </select>
-            <select onChange={(e)=>{handleAlphabetical(e)}}>
+            <select className={styles.filters} onChange={(e)=>{handleAlphabetical(e)}}>
                 <option value = 'alphabeticalDefault'>Alphabetical</option>
                 <option value = 'A-Z'>A-Z</option>
                 <option value = 'Z-A'>Z-A</option>
             </select>
-            <select onChange={(e)=>{handleFilterCreated(e)}}>
+            <select className={styles.filters} onChange={(e)=>{handleFilterCreated(e)}}>
                 <option value = 'all'>All Videogames</option>
                 <option value = 'existing'>Existing Videogame</option>
                 <option value = 'created'>Created Videogame</option>
             </select>
-            <select onChange={(e)=>{handleFilterGenre(e)}}>
+            <select className={styles.filters} onChange={(e)=>{handleFilterGenre(e)}}>
                 <option value ='genres'>Genres</option>
                 <option value="Action">Action</option>
                 <option value="Indie">Indie</option>
@@ -109,32 +118,29 @@ export default function Home (){
                 <option value="Educational">Educational</option>
                 <option value="Card">Card</option>
             </select>
-        </div>
-            <button className={styles.btnReload} onClick={e=>{handleClick(e)}}>
-                Reload all videogames
-            </button>
-            <div>
-
-                <Pagination
-                gamesPerPage={gamesPerPage}
-                allVideogames={allVideogames.length}
-                pagination = {pagination}
-                />
-
-                <SearchBar
-                setCurrentPage={setCurrentPage}/>
-            <div>
-            {currentGames?.map((v) => {
-                return (
-                    <div key={v.id} >
-                    <Link className={styles.link}  to={"/home/" + v.id} >
-                            <Card name = {v.name} image = {v.image} key = {v.id}/>
-                    </Link>
-                    </div>
-                );
-                })
-            }
             </div>
+            <div>
+                <div className={styles.container}>
+                    <Pagination
+                        gamesPerPage={gamesPerPage}
+                        allVideogames={allVideogames.length}
+                        pagination = {pagination}
+                    />
+                </div>
+                <div className={styles.gridcontainer}>
+                    <div className={styles.grid}>
+                        {currentGames?.map((v) => {
+                            return (
+                                <div key={v.id} >
+                                    <Link className={styles.link}  to={"/home/" + v.id} >
+                                        <Card name = {v.name} image = {v.image} genres = {v.genres} createdInDb = {v.createdInDb}key = {v.id}/>
+                                    </Link>
+                                </div>
+                                );
+                            })
+                        }
+                    </div>
+                </div>
             </div>
         </div>
         </div>

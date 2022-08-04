@@ -186,7 +186,7 @@ export default function VideogameCreate(){
                     onChange={(e)=> handleChange(e)}
                     />
                     {errors.name && (
-                        <p>{errors.name}</p>
+                        <p className={styles.p}>{errors.name}</p>
                     )}
                 </div>
 
@@ -203,7 +203,7 @@ export default function VideogameCreate(){
                     onChange={(e)=> handleChange(e)}
                     />
                     {errors.description && (
-                        <p>{errors.description}</p>
+                        <p className={styles.p}>{errors.description}</p>
                     )}
                 </div>
 
@@ -220,7 +220,7 @@ export default function VideogameCreate(){
                     onChange={(e)=> handleChange(e)}
                     />
                     {errors.released && (
-                        <p>{errors.released}</p>
+                        <p className={styles.p}>{errors.released}</p>
                     )}
                 </div>
 
@@ -237,7 +237,7 @@ export default function VideogameCreate(){
                     onChange={(e)=> handleChange(e)}
                     />
                     {errors.rating && (
-                        <p>{errors.rating}</p>
+                        <p className={styles.p}>{errors.rating}</p>
                     )}
                 </div>
 

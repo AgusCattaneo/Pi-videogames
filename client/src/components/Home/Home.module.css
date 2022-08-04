@@ -4,15 +4,12 @@ html body {
     width: 100%;
   }
 
-  .container {
+  .top{
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-  }
-
-  .title{
-    font-size: 80px;
-    color: var(--color-neon-green)
+    justify-content: left;
+    margin-top: 20px;
+    margin-left: 100px;
+    margin-bottom: 30px;
   }
 
   .btnCreate{
@@ -23,17 +20,20 @@ html body {
     transition: all .25s;  
     cursor: pointer;  
     border-radius: 20px;
+    margin-right: 200px;
   }
 
   .btnCreate:hover{
-    background-color: var(--color-kleptomaniac-grass);
+    background-color: rgba(0, 0, 0, 0.2);
     color: var(--color-dark-green);
   }
 
   .btnReload{
+    height: 45px;
+    width: 280px;
     background-color: transparent;
     color: var(--color-neon-green);
-    border-color: transparent;
+    border-color: var(--color-neon-green);
     font-size: 1.5em;
     transition: all .25s;
     cursor: pointer;
@@ -41,8 +41,14 @@ html body {
   }
 
   .btnReload:hover{
-    background-color: var(--color-kleptomaniac-grass);
+    background-color: rgba(0, 0, 0, 0.2);
     color: var(--color-dark-green);
+  }
+
+  .container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .link:link{
@@ -55,4 +61,27 @@ html body {
 
   .link:hover{
     color: var(--color-kleptomaniac-grass)
+  }
+
+  .filters{
+    background-color:  rgb(112, 205, 111);
+    height: 25px;
+    border-radius: 10px;
+    border-color: var(--color-kleptomaniac-grass);
+    margin-top: 5px;
+    margin-right: 5px;
+    cursor: pointer;
+  }
+
+  .gridcontainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 150px;
+  }
+
+  .grid{
+    display: grid;
+    grid-template-columns: repeat(3 , 500px);
+
   }

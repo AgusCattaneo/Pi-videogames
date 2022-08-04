@@ -1,0 +1,15 @@
+.pagBtn{
+    margin-top: 10px;
+    margin-right: 2px;
+    height: 2.5em;
+    width: 2.5em;
+    background-color: var(--color-neon-green);
+    transition: all .25s;
+    border-radius: 5px;
+    border-color: var(--color-neon-green);
+    font-size: 1.05em;
+}
+
+.pagBtn:hover{
+    background-color: var(--color-dark-green);
+}

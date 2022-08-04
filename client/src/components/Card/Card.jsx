@@ -1,10 +1,12 @@
 import React from "react";
+import styles from "./Card.module.css"
 
-export default function GameCard({ name , image }){
+export default function GameCard({ name , image , genres , createdInDb}){
     return (
-        <div>
+        <div className={styles.card}>
             <h3>{name}</h3>
-            <img src={image} alt ='not found' width="400px" heigth="250px" />
+            <img src={image} alt ='not found' width="200px" heigth="150px" />
+            <p>{!createdInDb? genres + ' ' : genres.map(e => e.name + (' '))}</p>
         </div>
     );
 }
