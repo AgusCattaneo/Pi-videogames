@@ -251,6 +251,7 @@ export default function VideogameCreate(){
                                         id={g.name}
                                         type="checkbox"
                                         className={styles.input}
+                                        key={g.name}
                                         name={g.name}
                                         value={g.name}
                                         onChange={(e)=> handleCheck(e)}
@@ -279,21 +280,21 @@ export default function VideogameCreate(){
                     <select className={styles.select} onChange={(e)=>handleSelect(e)}>
                         <option value="" hidden >Platforms</option>
                         {plats.map((p)=> (
-                            <option value={p}>{p}</option>
+                            <option key={p} value={p}>{p}</option>
                         ))}
                     </select>
                 </div>
                 <div className={styles.platforms}>
                     {input.platforms.map(p =>
-                        <div className={styles.divPlat}>
+                        <div className={styles.divPlat} key={p}>
                             <div className={styles.plat}>{p}</div>
-                            <button className={styles.btnDelete} onClick={()=> handleDelete(p)}>x</button> 
+                            <button className={styles.btnDelete} onClick={()=> handleDelete(p)}>X</button> 
                         </div>
                     )}
                     </div>
                 
                 <div  className={styles.divSubmit}>
-                    <button className={styles.submit} type="submit">Submit</button>
+                    <button className={styles.submit} type="submit" disabled={!input.name}>Submit</button>
                 </div>
             </form>
             </div>

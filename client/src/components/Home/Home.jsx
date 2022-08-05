@@ -98,25 +98,25 @@ export default function Home (){
             </select>
             <select className={styles.filters} onChange={(e)=>{handleFilterGenre(e)}}>
                 <option value ='genres'>Genres</option>
-                <option value="Action">Action</option>
-                <option value="Indie">Indie</option>
-                <option value="Adventure">Adventure</option>
-                <option value="RPG">RPG</option>
-                <option value="Strategy">Strategy</option>
-                <option value="Shooter">Shooter</option>
-                <option value="Casual">Casual</option>
-                <option value="Simulation">Simulation</option>
-                <option value="Puzzle">Puzzle</option>
-                <option value="Arcade">Arcade</option>
-                <option value="Platformer">Platformer</option>
-                <option value="Racing">Racing</option>
-                <option value="Massively Multiplayer">Massively Multiplayer</option>
-                <option value="Sports">Sports</option>
-                <option value="Fighting">Fighting</option>
-                <option value="Family">Family</option>
-                <option value="Board Games">Board Games</option>
-                <option value="Educational">Educational</option>
-                <option value="Card">Card</option>
+                <option value="Action" key="Action">Action</option>
+                <option value="Indie" key="Indie">Indie</option>
+                <option value="Adventure" key="Adventure">Adventure</option>
+                <option value="RPG" key="RPG">RPG</option>
+                <option value="Strategy" key="Strategy">Strategy</option>
+                <option value="Shooter" key="Shooter">Shooter</option>
+                <option value="Casual" key="Casual">Casual</option>
+                <option value="Simulation" key="Simulation">Simulation</option>
+                <option value="Puzzle" key="Puzzle">Puzzle</option>
+                <option value="Arcade" key="Arcade">Arcade</option>
+                <option value="Platformer" key="Platformer">Platformer</option>
+                <option value="Racing" key="Racing">Racing</option>
+                <option value="Massively Multiplayer" key="Massively Multiplayer">Massively Multiplayer</option>
+                <option value="Sports" key="Sports">Sports</option>
+                <option value="Fighting" key="Fighting">Fighting</option>
+                <option value="Family" key="Family">Family</option>
+                <option value="Board Games" key="Board Games">Board Games</option>
+                <option value="Educational" key="Educational">Educational</option>
+                <option value="Card" key="Card">Card</option>
             </select>
             </div>
             <div>
