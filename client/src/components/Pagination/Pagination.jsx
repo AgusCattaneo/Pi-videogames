@@ -13,7 +13,7 @@ export default function Pagination ({gamesPerPage , allVideogames , pagination})
             <ul>
                 {pageNumbers && 
                 pageNumbers.map(n =>(
-                    <button className={styles.pagBtn} onClick={()=> pagination(n)}>{n}</button>
+                    <button key={n} className={styles.pagBtn} onClick={()=> pagination(n)}>{n}</button>
                 ))}
             </ul>
         </nav>
