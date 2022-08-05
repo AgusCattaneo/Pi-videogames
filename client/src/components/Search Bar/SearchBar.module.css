@@ -5,17 +5,20 @@
     color: black;
     border: none;
     border-radius: 5px;
+    margin-left: 100px;
     margin-right: 5px;
 }
 
 .searchBtn{
-    height: 35px;
+    height: 30px;
     width: 75px;
     background-color: transparent;
     color: var(--color-neon-green);
     border-color: var(--color-neon-green);
     border-radius: 10px;
     transition: all , 0.25s;
+    font-family: 'Alumni Sans Inline One', cursive;
+    font-size: 1.4em;
 }
 
 .searchBtn:hover{

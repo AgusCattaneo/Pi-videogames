@@ -50,7 +50,7 @@ export default function VideogameCreate(){
         rating: "",
         platforms: [],
         image: "",
-        genre: [],
+        genres: [],
 
     })
 
@@ -120,12 +120,12 @@ export default function VideogameCreate(){
         if(e.target.checked){
             setInput({
                 ...input,
-                genre: [...input.genre, e.target.value]
+                genres: [...input.genres, e.target.value]
             })
         } else if(!e.target.checked){
             setInput({
                 ...input,
-                genre: input.genre.filter((g)=> g !== e.target.value)
+                genres: input.genres.filter((g)=> g !== e.target.value)
             })
         }
     }
@@ -146,7 +146,7 @@ export default function VideogameCreate(){
             alert('There is already a videogame with that name, please enter another name')
         } else {
             let error = Object.keys(validate(input))
-            if(error.length !== 0 || !input.genre.length || !input.platforms.length){
+            if(error.length !== 0 || !input.genres.length || !input.platforms.length){
                 alert('Please fill all the fields correctly')
                 return
             } else {
@@ -158,7 +158,7 @@ export default function VideogameCreate(){
                     rating: "",
                     platforms: [],
                     image: "",
-                    genre: [], 
+                    genres: [], 
                 })
                 alert("Videogame Added")
             }
@@ -228,7 +228,7 @@ export default function VideogameCreate(){
                 <div className={styles.div}>
                     <label className={styles.label}>Rating:</label>
                     <input
-                    type= "number"
+                    type= "text"
                     className={styles.input}
                     required
                     value= {input.rating}
@@ -256,7 +256,7 @@ export default function VideogameCreate(){
                                         value={g.name}
                                         onChange={(e)=> handleCheck(e)}
                                     />
-                                    <label for={g.name}>{g.name}</label>
+                                    <label >{g.name}</label>
                                 </div>
                             ))}
                         </div>

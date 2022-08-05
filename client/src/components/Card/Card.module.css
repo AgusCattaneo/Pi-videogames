@@ -42,3 +42,13 @@
     visibility:hidden;
     transition:all .5s ease-in-out;
   }
+
+  .cardTitle{
+    font-family: 'Fredoka One', cursive;
+    margin-bottom: 5px;
+    margin-top: -5px;
+  }
+
+  .genres{
+    font-family: 'Montserrat', sans-serif;
+  }
